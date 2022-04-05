@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DatialsController;
@@ -23,3 +24,4 @@ Route::get('/', function () {
 Route::get('/home', [IndexController::class, 'indexShow']);
 Route::get('/companies', [CompanyController::class, 'companyShow']);
 Route::get('/details', [DatialsController::class, 'detialsShow']);
+Route::post('/insert', [UsersController::class, 'register'])->name('insert');
